@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'tweets#new'
 
   resources :tweets
+
+  get 'play_tweet_auto', to: 'tweets#audio_player'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
