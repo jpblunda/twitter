@@ -17,7 +17,10 @@ class TweetsController < ApplicationController
     private
 
     def tweet_params
-    	params.require(:tweet).permit(:content)
+        # below line means require that the parameters hash contain something called 'tweet' and that 
+        # tweet contains something called 'content'
+        # params refers to the Parameters hash (yes, weird)
+    	params.require("tweet").permit(:content)
     end
 
 end
